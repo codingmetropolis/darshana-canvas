@@ -52,7 +52,7 @@ const Hero = () => {
             <Button 
               size="lg"
               className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold px-8 py-6 text-lg transition-all hover:scale-105"
-              onClick={() => window.location.href = 'tel:08185200988'}
+              onClick={() => window.location.href = 'tel:08722228760'}
             >
               <Phone className="mr-2 h-5 w-5" />
               Call to Reserve

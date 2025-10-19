@@ -20,7 +20,7 @@ const Contact = () => {
     
     // Create WhatsApp message
     const message = `New Reservation Request:\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nMessage: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/918185200988?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/918722228760?text=${encodeURIComponent(message)}`;
     
     // Open WhatsApp
     window.open(whatsappUrl, '_blank');
@@ -73,12 +73,12 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-2">Phone</h3>
-                  <a href="tel:08185200988" className="text-muted-foreground hover:text-primary transition-colors block">
-                    081852 00988
-                  </a>
-                  <a href="tel:+918722228760" className="text-muted-foreground hover:text-primary transition-colors block">
+                  <a href="tel:08722228760" className="text-muted-foreground hover:text-primary transition-colors block">
                     +91 87222 28760
                   </a>
+                  {/* <a href="tel:+918722228760" className="text-muted-foreground hover:text-primary transition-colors block">
+                    +91 87222 28760
+                  </a> */}
                 </div>
               </div>
             </Card>

@@ -40,7 +40,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="tel:08185200988"
+                  href="tel:08722228760"
                   className="text-primary-foreground/80 hover:text-gold transition-colors"
                 >
                   Make a Reservation
@@ -62,12 +62,12 @@ const Footer = () => {
               <li className="flex items-center gap-2">
                 <Phone className="h-5 w-5 text-gold flex-shrink-0" />
                 <div className="text-primary-foreground/80">
-                  <a href="tel:08185200988" className="hover:text-gold transition-colors block">
-                    081852 00988
-                  </a>
-                  <a href="tel:+918722228760" className="hover:text-gold transition-colors block">
+                  <a href="tel:08722228760" className="hover:text-gold transition-colors block">
                     +91 87222 28760
                   </a>
+                  {/* <a href="tel:+918722228760" className="hover:text-gold transition-colors block">
+                    +91 87222 28760
+                  </a> */}
                 </div>
               </li>
               <li className="flex items-center gap-2">
