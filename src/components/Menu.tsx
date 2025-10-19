@@ -120,7 +120,7 @@ const menuData = {
 };
 
 const MenuSection = ({ items, image }: { items: MenuItem[]; image?: string }) => (
-  <div className="grid md:grid-cols-2 gap-8">
+  <div className="grid md:grid-cols-2 gap-6 md:gap-8">
     {image && (
       <div className="hidden md:block">
         <img
@@ -132,23 +132,23 @@ const MenuSection = ({ items, image }: { items: MenuItem[]; image?: string }) =>
       </div>
     )}
     <div className={image ? "" : "md:col-span-2"}>
-      <div className="grid sm:grid-cols-2 gap-4">
+      <div className="grid gap-3 md:gap-4">
         {items.map((item, index) => (
           <div
             key={index}
-            className="flex justify-between items-center p-4 rounded-lg bg-card shadow-card hover:shadow-elevated transition-shadow"
+            className="flex justify-between items-center p-4 md:p-5 rounded-lg bg-card shadow-card hover:shadow-elevated transition-all active:scale-[0.98]"
           >
-            <div>
-              <h4 className="font-semibold text-foreground">
+            <div className="flex-1 mr-4">
+              <h4 className="font-semibold text-foreground text-base md:text-lg">
                 {item.name}
                 {item.popular && (
-                  <span className="ml-2 text-xs bg-accent text-accent-foreground px-2 py-1 rounded-full">
+                  <span className="ml-2 text-xs bg-accent text-accent-foreground px-2 py-1 rounded-full inline-block mt-1 md:mt-0">
                     Popular
                   </span>
                 )}
               </h4>
             </div>
-            <p className="font-bold text-primary text-lg">₹{item.price}</p>
+            <p className="font-bold text-primary text-lg md:text-xl whitespace-nowrap">₹{item.price}</p>
           </div>
         ))}
       </div>
@@ -160,33 +160,50 @@ const Menu = () => {
   return (
     <section id="menu" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary mb-4">
+      <div className="text-center mb-8 md:mb-12">
+          <h2 className="font-playfair text-3xl md:text-5xl font-bold text-primary mb-3 md:mb-4">
             Our Menu
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto px-4">
             Explore our diverse selection of authentic vegetarian dishes prepared with love and traditional recipes
           </p>
         </div>
 
         <Tabs defaultValue="breakfast" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 mb-12 bg-muted p-2 rounded-lg">
-            <TabsTrigger value="breakfast" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-              Breakfast
-            </TabsTrigger>
-            <TabsTrigger value="starters" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-              Starters
-            </TabsTrigger>
-            <TabsTrigger value="rice" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-              Rice & Biryani
-            </TabsTrigger>
-            <TabsTrigger value="punjabi" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-              Main Course
-            </TabsTrigger>
-            <TabsTrigger value="breads" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-              Breads
-            </TabsTrigger>
-          </TabsList>
+          <div className="mb-8 md:mb-12 overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
+            <TabsList className="inline-flex md:grid w-auto md:w-full grid-cols-5 mb-0 bg-muted p-2 rounded-lg min-w-max md:min-w-0">
+              <TabsTrigger 
+                value="breakfast" 
+                className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground whitespace-nowrap px-4 md:px-3"
+              >
+                Breakfast
+              </TabsTrigger>
+              <TabsTrigger 
+                value="starters" 
+                className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground whitespace-nowrap px-4 md:px-3"
+              >
+                Starters
+              </TabsTrigger>
+              <TabsTrigger 
+                value="rice" 
+                className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground whitespace-nowrap px-4 md:px-3"
+              >
+                Rice & Biryani
+              </TabsTrigger>
+              <TabsTrigger 
+                value="punjabi" 
+                className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground whitespace-nowrap px-4 md:px-3"
+              >
+                Main Course
+              </TabsTrigger>
+              <TabsTrigger 
+                value="breads" 
+                className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground whitespace-nowrap px-4 md:px-3"
+              >
+                Breads
+              </TabsTrigger>
+            </TabsList>
+          </div>
 
           <TabsContent value="breakfast">
             <MenuSection items={menuData.breakfast} image={masalaDosa} />
