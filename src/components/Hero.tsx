@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin } from "lucide-react";
 import heroImage from "@/assets/hero-thali.jpg";
+import chefLogo from "@/assets/chef-logo.png";
 
 const Hero = () => {
   return (
@@ -16,6 +17,11 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20 text-center">
         <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+          {/* Logo */}
+          <div className="flex justify-center mb-6">
+            <img src={chefLogo} alt="Hotel Navaratna Chef Logo" className="w-32 h-32 md:w-40 md:h-40 object-contain" />
+          </div>
+          
           {/* Kannada Text */}
           <p className="text-gold text-xl md:text-2xl font-medium tracking-wide">
             ಹೋಟೆಲ್ ನವರತ್ನ
@@ -30,7 +36,7 @@ const Hero = () => {
           </p>
           
           <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">
-            Authentic South Indian, Chinese & Punjabi Cuisine in the Heart of Nittur, Karnataka
+            Authentic South Indian, Chinese & Punjabi Cuisine - Best Restro Near Kodachadri in the Heart of Nittur, Karnataka
           </p>
 
           {/* CTA Buttons */}
@@ -45,8 +51,7 @@ const Hero = () => {
             
             <Button 
               size="lg"
-              variant="outline"
-              className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold px-8 py-6 text-lg transition-all hover:scale-105"
+              className="bg-primary-foreground/10 backdrop-blur-sm border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold px-8 py-6 text-lg transition-all hover:scale-105"
               onClick={() => window.location.href = 'tel:08185200988'}
             >
               <Phone className="mr-2 h-5 w-5" />
@@ -57,7 +62,14 @@ const Hero = () => {
           {/* Location Info */}
           <div className="pt-8 flex items-center justify-center gap-2 text-primary-foreground/90">
             <MapPin className="h-5 w-5 text-gold" />
-            <p className="text-base md:text-lg">Kolluru/Shivamogga Road, Nittur - 577452</p>
+            <a 
+              href="https://share.google/Rl5Bg2ooajUxslTDh" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-base md:text-lg hover:text-gold transition-colors"
+            >
+              WWC5+W3 Nittur, Karnataka
+            </a>
           </div>
         </div>
       </div>
